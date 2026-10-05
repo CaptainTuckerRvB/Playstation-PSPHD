@@ -1,290 +1,59 @@
-# Playstation-PSPHD
-Notes from investigating the official Sony PlayStation Portable emulator for PlayStation 4 and Playstation 5
+# PSPHD Research
 
-Background
- 
-Sony introduced official PSP emulation on PlayStation 4 as part of its modern PlayStation Classics ecosystem. The emulator, commonly referred to by the scene as PSPHD, provides a native PSP emulation environment with additional PS4-specific functionality, including graphical enhancements, configuration options, scripting, and title-specific compatibility modifications.
- 
-This repository documents the investigation of PSPHD and its surrounding ecosystem.
- 
-The goal is to build an evidence-based understanding of:
- 
-- PSPHD emulator versions
-- Emulator configuration
-- CLI commands
-- Lua scripting
-- Allegrex CPU patches
-- Graphics and GLES behavior
-- Texture handling and replacement
-- Audio and video handling
-- Memory mapping
-- Title-specific compatibility modifications
-- PS4 package structure
-- PSPHD-based commercial releases
-- Runtime behavior
-- Differences between PSPHD implementations
-- Compatibility with existing PPSSPP texture packs
- 
-The long-term goal is to use this research to develop an independently reproducible PSP-to-PS4 compatibility and preservation workflow.
- 
-Research Philosophy
- 
-PSPHD is poorly documented and many behaviors are not yet understood.
- 
-This project therefore distinguishes between:
- 
-- OBSERVED — directly observed from a running system, binary, configuration, trace, or other primary evidence.
-- VERIFIED — independently reproduced through testing.
-- INFERRED — strongly supported but not directly demonstrated.
-- UNKNOWN — insufficient evidence.
- 
-Conclusions should never be presented as verified when they are only inferred.
- 
-PSPHD Research
- 
-Emulator Versions
- 
-Version| Date| Release| Notes
-?| ?| Initial PSPHD releases| Research pending
-?| ?| LocoRoco 2 Remastered| Research pending
-?| ?| Resistance: Retribution| Research pending
-?| ?| Patapon 2| Research pending
- 
-Official PSPHD-Based Releases
- 
-Research targets include known PSP-derived PS4 releases and titles documented by the PS4 Developer Wiki.
- 
-Current research categories include:
- 
-- PSP Remaster releases
-- PSP Classics
-- PSP demos
-- Title-specific PSPHD implementations
-- Unknown/unclassified PSP emulator variants
- 
-See:
- 
-- "research/games/"
-- "research/versions/"
-- "research/compatibility/"
- 
-Configuration
- 
-PSPHD configuration research includes:
- 
-- "config-title.txt"
-- "config-emu-ps4.txt"
-- "package-ps4.conf"
-- "revision.conf"
-- emulator command-line arguments
-- title-specific configuration
-- runtime configuration changes
-- temporary configuration files
- 
-Configuration behavior should be documented with the emulator version and title from which it was observed.
- 
-Emulator Commands
- 
-Known PSPHD commands and options are documented in:
- 
-"research/commands/"
- 
-Each command should include:
- 
-- syntax
-- known purpose
-- observed behavior
-- affected subsystem
-- emulator version
-- title
-- evidence
-- confidence
- 
-Unknown commands should remain explicitly marked as unknown.
- 
-Lua
- 
-PSPHD supports Lua-based functionality used by some titles and emulator configurations.
- 
-Lua research includes:
- 
-- script loading
-- script order
-- available functions
-- emulator configuration functions
-- compatibility patches
-- game-specific scripts
-- tooling scripts
-- trophy-related scripts
- 
-See:
- 
-"research/lua/"
- 
-Graphics
- 
-Graphics research focuses on the PSPHD rendering pipeline, including:
- 
-- GLES
-- Piglet
-- texture handling
-- texture formats
-- texture caches
-- CLUT handling
-- framebuffer behavior
-- filtering
-- scaling
-- anti-aliasing
-- rendering compatibility
-- shader behavior
-- VRAM behavior
- 
-See:
- 
-"research/graphics/"
- 
-Texture Research
- 
-PSPHD provides functionality for saving textures while games are running.
- 
-Research will document:
- 
-- texture extraction
-- texture identification
-- texture hashes
-- dimensions
-- formats
-- mipmaps
-- CLUT information
-- texture replacement
-- title-specific texture behavior
- 
-Original extracted assets must always be preserved.
- 
-The intended processing pipeline is:
- 
-PSP Game
-   ↓
-PSPHD
-   ↓
-Texture Extraction
-   ↓
-Validation
-   ↓
-[Pause]
-   ↓
-Original / PPSSPP Pack / External Upscale / Remaster
-   ↓
-Validation
-   ↓
-PSPHD Texture Package
-   ↓
-PS4 Package
- 
-PPSSPP Texture Compatibility
- 
-PSPHD research will include compatibility with existing PPSSPP texture packs.
- 
-PPSSPP texture packs will be treated as an input format rather than the internal PSPHD format.
- 
-The intended pipeline is:
- 
-PPSSPP Texture Pack
-        ↓
-PSPHD Importer
-        ↓
-PSPHD Texture Representation
-        ↓
-PS4 Texture Mapping
- 
-Original PPSSPP identifiers should be retained so imported assets remain traceable to their source.
- 
-Reverse Engineering
- 
-Static reverse engineering is supported by open-source analysis tools and, where appropriate, REA.
- 
-REA is intended to assist with:
- 
-- binary analysis
-- function discovery
-- call relationships
-- data-flow investigation
-- evidence collection
-- runtime/reconstruction research
- 
-AI-generated conclusions must not be treated as evidence without verification.
- 
-Evidence
- 
-Research findings are stored separately from explanatory documentation.
- 
-Each finding should contain:
- 
-- unique ID
-- target
-- emulator version
-- game/title
-- observation
-- evidence
-- confidence
-- related findings
-- reproduction status
- 
-Example:
- 
-id: GLES-00001
-status: VERIFIED
-target: PSPHD
-subsystem: graphics
-finding: ...
-evidence:
-  - ...
-tests:
-  - ...
-confidence: high
- 
-Compatibility Research
- 
-The project maintains a compatibility database covering known PSPHD-related releases and research targets.
- 
-Current reference material includes the PS4 Developer Wiki PSP emulation and compatibility documentation.
- 
-Tools
- 
-The project intends to remain usable with free and open-source tooling wherever practical.
- 
-Primary development environment:
- 
-- GitHub
-- GitHub Codespaces
-- Git
-- Python
-- Node.js
-- Ghidra
-- REA
-- PPSSPP
-- PS4 development/research tooling where legally available
- 
-Project Status
- 
-Early research / documentation
- 
-The project is not an emulator.
- 
-It is a research and tooling project intended to understand PSPHD behavior and develop reproducible methods for PSP-to-PS4 compatibility and preservation.
- 
-Disclaimer
- 
-This repository contains research and documentation concerning software behavior.
- 
-Do not distribute copyrighted game content, proprietary Sony binaries, decrypted commercial software, or other material that you do not have the right to distribute.
- 
-Users are responsible for complying with applicable laws and the licenses and terms applicable to any software or content they analyze.
- 
-References
- 
-- PS4 Developer Wiki
-- PPSSPP
-- REA
-- PlayStation-PS1HD
+Research notes on the Sony PSP emulator used by some PlayStation 4 and PlayStation 5 releases, commonly referred to in this project as PSPHD. The exact scope, versions, and behavior are **UNKNOWN** until supported by cited evidence.
+
+This repository is a documentation and research foundation. It does not contain emulator code, and it does not implement a game conversion, texture, or package workflow.
+
+## Research Status
+
+No PSPHD behavior has been established by this repository yet. Treat undocumented details as **UNKNOWN**. Findings must distinguish:
+
+- `OBSERVED`: recorded directly from identified evidence.
+- `VERIFIED`: independently reproduced and documented.
+- `INFERRED`: supported by evidence but not directly demonstrated.
+- `UNKNOWN`: evidence is insufficient or absent.
+
+Do not promote an inference to an observation or verification. See [AGENTS.md](AGENTS.md) for research and contribution rules.
+
+## Research Indexes
+
+- [Emulator versions](research/versions/README.md)
+- [Games](research/games/README.md)
+- [Configuration](research/configuration/README.md)
+- [Commands](research/commands/README.md)
+- [Lua](research/lua/README.md)
+- [Graphics](research/graphics/README.md)
+- [Textures](research/textures/README.md)
+- [Compatibility](research/compatibility/README.md)
+
+Each index starts empty. Its current state is `UNKNOWN`; entries should be added only with traceable sources and a confidence/status label.
+
+## Evidence
+
+Evidence records are JSON documents described by [the evidence schema](evidence/schema.json). Use `UNKNOWN` for fields that cannot yet be established. Validate records with the included standard-library tool:
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 tools/validate_evidence.py evidence/records
+```
+
+The validator checks for schema-required fields; it is not a full JSON Schema implementation.
+
+## Long-Term Research Context
+
+The intended research direction may eventually connect PSP game analysis, emulator/configuration analysis, verified compatibility research, texture extraction, PPSSPP texture-pack compatibility, optional external texture upscaling/remastering, texture reintegration, and PS4 package generation. This is context only: **none of that pipeline is implemented here**.
+
+## Sources
+
+These sources are starting points, not proof that any particular PSPHD behavior exists. Record the specific page, revision, or artifact used for each finding.
+
+- [andshrew/PlayStation-PS1HD](https://github.com/andshrew/PlayStation-PS1HD) — documentation organization inspiration only. PS1-specific code and behavior are not reused or assumed to apply.
+- [PS4 Developer Wiki: PSP Emulation](https://www.psdevwiki.com/ps4/PSP_Emulation) — community-maintained research reference.
+- [PS4 Developer Wiki: PSP Classics Emulator Compatibility List](https://www.psdevwiki.com/ps4/PSP_Emulation_Compatibility_List) — community-maintained compatibility reference.
+- [PPSSPP](https://www.ppsspp.org/) and [its source repository](https://github.com/hrydgard/ppsspp) — reference emulator and project documentation; PSPHD equivalence is not assumed.
+- REA — source named for future research. The exact project identity and canonical URL are **UNKNOWN** and must be resolved before citing specific REA material.
+
+## Scope and Materials
+
+Keep the repository lightweight and prefer free/open-source tools. Do not add proprietary Sony binaries, decrypted commercial game files, copyrighted assets, or other restricted material. This repository documents research; it is not an emulator.
  
