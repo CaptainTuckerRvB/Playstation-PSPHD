@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PSPHD Research Index",
+  "description": "Shared structure for compact, source-linked research indexes.",
+  "type": "object",
+  "required": ["category", "entries"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Path to this shared index schema."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "releases",
+        "titles",
+        "configuration_options",
+        "commands",
+        "lua_functionality",
+        "graphics_functionality",
+        "texture_functionality",
+        "package_structure",
+        "compatibility_behavior"
+      ],
+      "description": "Research area represented by this index."
+    },
+    "entries": {
+      "type": "array",
+      "description": "Evidence-backed records. Keep empty until research is performed.",
+      "items": { "$ref": "#/$defs/entry" }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "category",
+        "description",
+        "source",
+        "source_url",
+        "status",
+        "confidence",
+        "related_ids",
+        "evidence_ids",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable record identifier."
+        },
+        "name": {
+          "type": "string",
+          "description": "Concise name supported by evidence."
+        },
+        "category": {
+          "type": "string",
+          "description": "Specific category within this index."
+        },
+        "description": {
+          "type": "string",
+          "description": "Compact summary; use UNKNOWN when not established."
+        },
+        "source": {
+          "type": "string",
+          "description": "Source title or artifact identifier; use UNKNOWN if unresolved."
+        },
+        "source_url": {
+          "type": "string",
+          "description": "Source URL; use UNKNOWN if unresolved."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["OBSERVED", "VERIFIED", "INFERRED", "UNKNOWN", "REJECTED"],
+          "description": "Evidence status, not an unsupported feature claim."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"],
+          "description": "Confidence in the stated conclusion."
+        },
+        "related_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of related records; empty when none are established."
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of supporting evidence records."
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Brief caveats or context; do not duplicate source material."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

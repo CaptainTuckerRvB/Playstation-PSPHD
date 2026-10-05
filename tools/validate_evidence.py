@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_RECORDS = ROOT / "evidence" / "records"
 SCHEMA_PATH = ROOT / "evidence" / "schema.json"

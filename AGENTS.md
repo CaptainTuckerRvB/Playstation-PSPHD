@@ -2,6 +2,24 @@
 
 These rules apply to research notes, evidence, and tooling in this repository.
 
+## Retrieval-First Research
+
+Optimize for low token use and high information recall. For ordinary tasks, do not load the whole research repository. First identify the relevant research area, then consult `evidence/index/` for relevant evidence IDs, related findings, and whether the question is already answered. Retrieve only relevant records and source details. Prefer existing verified findings; repeat analysis only when evidence is insufficient. Mark gaps `UNKNOWN`.
+
+Evidence priority: `VERIFIED` findings, `OBSERVED` primary evidence, existing tests, direct source artifacts, `INFERRED` conclusions, then model reasoning. Model reasoning alone is never evidence.
+
+Keep durable knowledge in repository files. Summarize findings in compact structured records, but never replace detailed findings with summaries that omit evidence references. In responses, use IDs and references instead of reproducing research documents or large evidence excerpts.
+
+For normal responses, use:
+
+```text
+STATUS:
+CONCLUSION:
+EVIDENCE:
+CONFIDENCE:
+NEXT ACTION:
+```
+
 - Do not invent PSPHD behavior, versions, commands, configuration options, compatibility results, or supported features. Mark undocumented or unresolved details `UNKNOWN`.
 - Cite the specific source for each factual claim. Prefer primary artifacts and reproducible observations; record source revisions, locations, and capture context where available.
 - Separate direct observations, independently reproduced results, inferences, and unknowns. Explain what an observation does and does not establish.

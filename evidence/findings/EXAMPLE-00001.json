@@ -1,0 +1,14 @@
+{
+  "id": "EXAMPLE-00001",
+  "status": "UNKNOWN",
+  "target": "FICTIONAL EXAMPLE ONLY",
+  "subsystem": "example",
+  "title_or_game": "UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "Fictional example record to demonstrate structure only; this makes no claim about PSPHD behavior.",
+  "evidence_references": [],
+  "confidence": "UNKNOWN",
+  "related_findings": [],
+  "tests": [],
+  "notes": ["FICTIONAL EXAMPLE ONLY. Do not cite as a research finding."]
+}

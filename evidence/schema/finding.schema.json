@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PSPHD Research Finding",
+  "description": "A compact, traceable research finding. Use UNKNOWN when details are not established.",
+  "type": "object",
+  "required": [
+    "id",
+    "status",
+    "target",
+    "subsystem",
+    "title_or_game",
+    "emulator_version",
+    "finding",
+    "evidence_references",
+    "confidence",
+    "related_findings",
+    "tests",
+    "notes"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["OBSERVED", "VERIFIED", "INFERRED", "UNKNOWN", "REJECTED"]
+    },
+    "target": { "type": "string", "minLength": 1 },
+    "subsystem": { "type": "string", "minLength": 1 },
+    "title_or_game": { "type": "string", "minLength": 1 },
+    "emulator_version": { "type": "string", "minLength": 1 },
+    "finding": { "type": "string", "minLength": 1 },
+    "evidence_references": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]
+    },
+    "related_findings": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "tests": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

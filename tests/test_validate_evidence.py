@@ -15,7 +15,10 @@ class ValidateRecordTests(unittest.TestCase):
 
         self.assertEqual(
             validate_record({"id": "TEST-00001"}, required_fields),
-            ["missing required field: status", "missing required field: evidence"],
+            [
+                "missing required field: status",
+                "missing required field: evidence",
+            ],
         )
 
     def test_non_object_record_is_rejected(self):
