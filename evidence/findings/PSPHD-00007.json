@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00007",
+  "status": "OBSERVED",
+  "target": "PSP Emulation graphics option notes",
+  "subsystem": "graphics commands",
+  "title_or_game": "UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "The supplied graphics topic notes list --antialias, --present, --gputhread, --gpu-renderthread, --force-triangle-clip-off, --force-native-aspect-ratio, --use-higher-precision-depth, --optimize-fb-self-resolves, --force-dsf-present, and --bend-30hz-lock. Their meanings, defaults, and availability are UNKNOWN.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_graphics_textures.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00009"],
+  "tests": [],
+  "notes": ["These names appear under 'Graphics CLI Options'. The packet documents no values, syntax beyond the names, effects, or build-wide support, and contains no URL."]
+}

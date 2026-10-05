@@ -1,5 +1,32 @@
 {
   "$schema": "../index.schema.json",
   "category": "configuration_options",
-  "entries": []
+  "entries": [
+    {
+      "id": "CFG-PSPHD-001",
+      "name": "Configuration filenames listed in the core packet",
+      "category": "configuration files",
+      "description": "The local core packet lists package-ps4.conf, config-title.txt, config-region.txt, and config-emu-ps4.txt as package/configuration filenames. It does not establish file roles, contents, title associations, values, or effects.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["PKG-PSPHD-001", "CMD-PSPHD-001", "TEX-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00005"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. Filename roles, per-title paths, configuration keys, values, defaults, effects, and precedence remain UNKNOWN."]
+    },
+    {
+      "id": "CFG-PSPHD-002",
+      "name": "Configuration precedence",
+      "category": "configuration behavior",
+      "description": "UNKNOWN: the local core packet names package-ps4.conf and config-title.txt but does not state their precedence or even establish their roles.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "related_ids": ["CFG-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00005"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. Do not infer precedence from file names or other emulators."]
+    }
+  ]
 }

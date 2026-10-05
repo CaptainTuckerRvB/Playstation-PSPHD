@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00003",
+  "status": "OBSERVED",
+  "target": "PSP Emulation texture hash mode references",
+  "subsystem": "texture identification",
+  "title_or_game": "UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "The supplied source notes list drawbounds, drawboundsloco, patchworkheroes, locoroco2, rondo, and full as texture hash-mode names. The hashing algorithms and applicability are UNKNOWN.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_graphics_textures.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00002"],
+  "tests": [],
+  "notes": ["The packet lists these labels under 'Texture Hash Modes'; it does not establish an algorithm, purpose, or title association. The packet itself does not contain a URL."]
+}

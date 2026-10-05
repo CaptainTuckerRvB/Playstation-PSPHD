@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00012",
+  "status": "OBSERVED",
+  "target": "Official PSP configuration file/title references",
+  "subsystem": "title and package relationship",
+  "title_or_game": "Syphon Filter: Dark Mirror; Echochrome; LocoRoco Midnight Carnival; Patapon 2; Resistance: Retribution",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local releases packet lists Syphon Filter Dark Mirror, Echochrome, LocoRoco Midnight Carnival, Patapon 2, and Resistance Retribution under 'Official Configuration Files'. It does not list per-title filenames or configuration contents.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_releases.md; existing source attribution S4 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Configuration_Files_(Official)&oldid=295120)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00001", "PSPHD-00004"],
+  "tests": [],
+  "notes": ["The packet supplies a title list beneath a heading, not individual file paths or file contents. It contains no URL; the S4 attribution is retained from existing source references."]
+}

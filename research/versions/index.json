@@ -1,5 +1,19 @@
 {
   "$schema": "../index.schema.json",
   "category": "releases",
-  "entries": []
+  "entries": [
+    {
+      "id": "VER-PSPHD-001",
+      "name": "PSPHD internal version/build identifiers",
+      "category": "version identifiers",
+      "description": "UNKNOWN: the local core packet contains no emulator version or build identifier; whether such identifiers are documented elsewhere is unknown.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "related_ids": [],
+      "evidence_ids": ["PSPHD-00001"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. Original-source attribution and URL are recorded in this entry; do not infer PSPHD version/build identifiers from title names or other emulators."]
+    }
+  ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00010",
+  "status": "OBSERVED",
+  "target": "Compatibility packet title names",
+  "subsystem": "compatibility scope",
+  "title_or_game": "Nine titles listed in the supplied compatibility topic note",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local compatibility packet lists God of War Chains of Olympus, God of War Ghost of Sparta, Tekken 6, Soulcalibur Broken Destiny, Wild Arms XF, Harvest Moon Hero of Leaf Valley, Power Stone Collection, Call of Duty Roads to Victory, and Tom Clancy Ghost Recon Advanced Warfighter 2 under 'Compatibility Table'. It lists rating labels separately but assigns no rating to a title; emulator/build applicability is UNKNOWN.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_compatibility.md; existing source attribution S2 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Emulator_Compatibility_List&oldid=297403; original-title association unresolved)"
+  ],
+  "confidence": "LOW",
+  "related_findings": ["PSPHD-00013"],
+  "tests": [],
+  "notes": ["The packet heading is 'PSPHD Compatibility Database', while S2 is titled 'PSP Classics Emulator Compatibility List'; this discrepancy is unresolved. Do not attribute results to PSPHD or a particular build."]
+}

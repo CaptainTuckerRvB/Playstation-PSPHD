@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00013",
+  "status": "OBSERVED",
+  "target": "PSP Emulation variant/title labels",
+  "subsystem": "emulator variants",
+  "title_or_game": "Echochrome; Syphon Filter Dark Mirror; Resistance Retribution; LocoRoco Midnight Carnival; Patapon 2; PaRappa",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local core packet lists Echochrome, Syphon Filter Dark Mirror, Resistance Retribution, LocoRoco Midnight Carnival, Patapon 2, and PaRappa beneath 'Known Emulator Variants'. It does not define the variant labels, describe differences, or map titles to builds.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_core.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00001", "PSPHD-00010", "PSPHD-00011"],
+  "tests": [],
+  "notes": ["The packet uses the heading 'Known Emulator Variants'; it does not establish that this is official Sony terminology or identify internal implementation differences. The packet contains no URL."]
+}

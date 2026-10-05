@@ -1,5 +1,19 @@
 {
   "$schema": "../index.schema.json",
   "category": "compatibility_behavior",
-  "entries": []
+  "entries": [
+    {
+      "id": "COMP-PSPHD-001",
+      "name": "Compatibility packet title names and scope",
+      "category": "title coverage",
+      "description": "The local compatibility packet lists nine title names under Compatibility Table and lists rating labels separately without assigning them to titles. Emulator/build applicability is UNKNOWN.",
+      "source": "PSP Classics Emulator Compatibility List - PS4 Developer wiki.pdf (oldid=297403)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Emulator_Compatibility_List&oldid=297403",
+      "status": "OBSERVED",
+      "confidence": "LOW",
+      "related_ids": ["GAME-PSPHD-003"],
+      "evidence_ids": ["PSPHD-00010"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_compatibility.md. Its heading 'PSPHD Compatibility Database' conflicts with the existing S2 source-title association 'PSP Classics Emulator Compatibility List'; unresolved. Do not assign ratings or emulator/build applicability."]
+    }
+  ]
 }

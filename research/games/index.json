@@ -1,5 +1,45 @@
 {
   "$schema": "../index.schema.json",
   "category": "titles",
-  "entries": []
+  "entries": [
+    {
+      "id": "GAME-PSPHD-001",
+      "name": "Release-category headings and ungrouped title list",
+      "category": "release headings and titles",
+      "description": "The local releases packet has headings for Official PSP Releases, Official PSP Remasters, PS4 Store Releases, and PS5 Store Releases, plus a separate list of 12 names under Release. It does not map individual titles to those categories or identify emulator/build usage.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["VER-PSPHD-001", "GAME-PSPHD-002"],
+      "evidence_ids": ["PSPHD-00011"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_releases.md. Do not infer title-to-category, platform, or emulator-build relationships from the separate headings and list."]
+    },
+    {
+      "id": "GAME-PSPHD-002",
+      "name": "Titles listed under Official Configuration Files",
+      "category": "heading and title list",
+      "description": "The local releases packet lists Syphon Filter Dark Mirror, Echochrome, LocoRoco Midnight Carnival, Patapon 2, and Resistance Retribution beneath the heading Official Configuration Files. It does not supply individual file paths or contents.",
+      "source": "PSP Classics Configuration Files (Official) - PS4 Developer wiki (oldid=295120)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Configuration_Files_(Official)&oldid=295120",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["PKG-PSPHD-001", "VER-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00005", "PSPHD-00012"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_releases.md. Existing source attribution and URL are retained; no per-title file or build relationship is inferred."]
+    },
+    {
+      "id": "GAME-PSPHD-003",
+      "name": "Titles listed under Known Emulator Variants",
+      "category": "heading and title list",
+      "description": "The local core packet lists Echochrome, Syphon Filter Dark Mirror, Resistance Retribution, LocoRoco Midnight Carnival, Patapon 2, and PaRappa beneath Known Emulator Variants. The packet does not define these labels, identify official terminology, or map titles to builds.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["COMP-PSPHD-001", "GAME-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00013"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. The packet uses this heading but does not establish Sony terminology, emulator identity for each title, or internal differences."]
+    }
+  ]
 }

@@ -1,5 +1,19 @@
 {
   "$schema": "../index.schema.json",
   "category": "lua_functionality",
-  "entries": []
+  "entries": [
+    {
+      "id": "LUA-PSPHD-001",
+      "name": "Documented Lua and Allegrex API names",
+      "category": "API names",
+      "description": "The local Lua packet lists apiRequest(), getEmuObject(), getAXObject(), AddHook, AddGPUHook, AddBootHook, AddVsyncHook, ReadMem8/16/32, WriteMem8/16/32, GetGpr, SetGpr, GetFpr, SetFpr, SetTextureHashMode, ToggleTextures, and RemapSavedata. It also names Patapon 2, Syphon Filter Dark Mirror, and Resistance Retribution under Official Lua Examples. API semantics, loading, and exact function-to-title mappings are not established.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238); PSP Classics Configuration Files (Official) (oldid=295120)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["GFX-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00008"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_lua_allegrex.md. S1 is the primary source_url; S4 is also cited by PSPHD-00008 at https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Configuration_Files_(Official)&oldid=295120. Names and section headings do not establish API semantics, script execution, or title/build scope."]
+    }
+  ]
 }

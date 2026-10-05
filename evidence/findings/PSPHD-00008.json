@@ -1,0 +1,17 @@
+{
+  "id": "PSPHD-00008",
+  "status": "OBSERVED",
+  "target": "PSP Emulation Lua and Allegrex interface documentation",
+  "subsystem": "Lua",
+  "title_or_game": "Title-specific patch scope; exact scope UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local Lua packet lists apiRequest(), getEmuObject(), getAXObject(), AddHook, AddGPUHook, AddBootHook, AddVsyncHook, ReadMem8/16/32, WriteMem8/16/32, GetGpr, SetGpr, GetFpr, SetFpr, SetTextureHashMode, ToggleTextures, and RemapSavedata. It names Patapon 2, Syphon Filter Dark Mirror, and Resistance Retribution under 'Official Lua Examples'. The packet does not describe API semantics, script execution, or exact function-to-title mappings.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_lua_allegrex.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)",
+    "Local packet: research/sources/psphd_ps4devwiki_lua_allegrex.md; existing source attribution S4 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Classics_Configuration_Files_(Official)&oldid=295120)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00009"],
+  "tests": [],
+  "notes": ["The function names and example headings are transcribed from the packet. The packet contains no URL and does not establish runtime behavior, loading, execution order, or exact script-to-title mapping."]
+}

@@ -1,5 +1,32 @@
 {
   "$schema": "../index.schema.json",
   "category": "commands",
-  "entries": []
+  "entries": [
+    {
+      "id": "CMD-PSPHD-001",
+      "name": "Command-related configuration filename labels",
+      "category": "configuration filename labels",
+      "description": "The local core packet lists package-ps4.conf and config-title.txt. Their role as command-option storage locations is UNKNOWN from this packet.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["CFG-PSPHD-001", "CFG-PSPHD-002", "TEX-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00006"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. The packet supplies filenames only; it does not establish command syntax, effects, or precedence."]
+    },
+    {
+      "id": "CMD-PSPHD-002",
+      "name": "Graphics CLI option names",
+      "category": "graphics options",
+      "description": "The local graphics/textures packet lists --antialias, --present, --gputhread, --gpu-renderthread, --force-triangle-clip-off, --force-native-aspect-ratio, --use-higher-precision-depth, --optimize-fb-self-resolves, --force-dsf-present, and --bend-30hz-lock under Graphics CLI Options. Effects, values, defaults, and build availability are UNKNOWN.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["GFX-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00007"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_graphics_textures.md. Option names are not evidence of effects, support in every build, or availability to end users."]
+    }
+  ]
 }

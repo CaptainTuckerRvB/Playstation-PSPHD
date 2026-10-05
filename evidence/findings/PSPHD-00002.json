@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00002",
+  "status": "OBSERVED",
+  "target": "PSP Emulation documentation",
+  "subsystem": "textures",
+  "title_or_game": "UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local graphics/textures packet lists the option names --texsave, --texmissingsave, --texloadmode, --texcachemode, --texreplace, --texswitch, --replacementfilter, --replacementalpha, --texclutmode, and --autoresampler. Their semantics and defaults are not established.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_graphics_textures.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00003", "PSPHD-00005"],
+  "tests": [],
+  "notes": ["The packet lists these option names but does not establish their runtime behavior, defaults, or support in every title/build. The packet itself does not contain a URL."]
+}

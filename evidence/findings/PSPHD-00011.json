@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00011",
+  "status": "OBSERVED",
+  "target": "Release-category headings and title names",
+  "subsystem": "titles and releases",
+  "title_or_game": "Twelve names listed under Release",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local releases packet has headings for Official PSP Releases, Official PSP Remasters, PS4 Store Releases, and PS5 Store Releases, followed by a separate 'Release' list of 12 titles. It does not map individual titles to those categories or identify emulator/build usage.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_releases.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00001", "PSPHD-00013"],
+  "tests": [],
+  "notes": ["The packet lists Daxter, Ape Escape Academy, Patapon, Patapon 2, Patapon 3, Resistance Retribution, Ridge Racer 2, Tekken 6, Soulcalibur Broken Destiny, Syphon Filter Dark Mirror, Killzone Liberation, and Jeanne d'Arc. The packet contains no URL and does not identify each title's release category."]
+}

@@ -1,5 +1,19 @@
 {
   "$schema": "../index.schema.json",
   "category": "package_structure",
-  "entries": []
+  "entries": [
+    {
+      "id": "PKG-PSPHD-001",
+      "name": "Package path and filename labels",
+      "category": "package headings and names",
+      "description": "The local core packet lists assets/, assets/PSPHD, app/USER_L0.IMG, sce_module, sce_sys, usermodule, vms, trophy_data, eboot.bin, revision.conf, package-ps4.conf, config-title.txt, config-region.txt, and config-emu-ps4.txt. Component purposes, completeness, and load sequence are UNKNOWN.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["CFG-PSPHD-001", "CFG-PSPHD-002"],
+      "evidence_ids": ["PSPHD-00004"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_core.md. The packet lists names only; it does not establish USER_L0.IMG's purpose or a complete package layout."]
+    }
+  ]
 }

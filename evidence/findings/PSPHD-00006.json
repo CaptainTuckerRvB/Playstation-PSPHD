@@ -1,0 +1,16 @@
+{
+  "id": "PSPHD-00006",
+  "status": "OBSERVED",
+  "target": "Command-related configuration filename labels",
+  "subsystem": "commands",
+  "title_or_game": "UNKNOWN",
+  "emulator_version": "UNKNOWN",
+  "finding": "The local core packet lists package-ps4.conf and config-title.txt. Their purpose as command-option locations and their precedence are UNKNOWN from this packet.",
+  "evidence_references": [
+    "Local packet: research/sources/psphd_ps4devwiki_core.md; existing source attribution S1 (source URL: https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238)"
+  ],
+  "confidence": "MEDIUM",
+  "related_findings": ["PSPHD-00005"],
+  "tests": [],
+  "notes": ["The packet lists filenames only; it does not document command-line behavior. The packet itself contains no URL."]
+}

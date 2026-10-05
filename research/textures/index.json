@@ -1,5 +1,32 @@
 {
   "$schema": "../index.schema.json",
   "category": "texture_functionality",
-  "entries": []
+  "entries": [
+    {
+      "id": "TEX-PSPHD-001",
+      "name": "Texture-related option names",
+      "category": "option names",
+      "description": "The local graphics/textures packet lists the option names --texsave, --texmissingsave, --texloadmode, --texcachemode, --texreplace, --texswitch, --replacementfilter, --replacementalpha, --texclutmode, and --autoresampler. Their semantics, effects, values, and defaults are not established.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": ["CMD-PSPHD-001"],
+      "evidence_ids": ["PSPHD-00002"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_graphics_textures.md. Names only; behavior, values, defaults, and variant availability are not established. The packet does not list --texloadcores; its existence and meaning are UNKNOWN."]
+    },
+    {
+      "id": "TEX-PSPHD-002",
+      "name": "Texture hash-mode names",
+      "category": "hash modes",
+      "description": "Names-only texture hash-mode list: drawbounds, drawboundsloco, patchworkheroes, locoroco2, rondo, and full. Algorithms, effects, and title/version scope are UNKNOWN.",
+      "source": "PSP Emulation - PS4 Developer wiki.pdf (oldid=297238)",
+      "source_url": "https://www.psdevwiki.com/ps4/index.php?title=PSP_Emulation&oldid=297238",
+      "status": "OBSERVED",
+      "confidence": "MEDIUM",
+      "related_ids": [],
+      "evidence_ids": ["PSPHD-00003"],
+      "notes": ["Packet: research/sources/psphd_ps4devwiki_graphics_textures.md. The packet lists mode names only and does not establish the hashing implementation, purpose, or title association."]
+    }
+  ]
 }
